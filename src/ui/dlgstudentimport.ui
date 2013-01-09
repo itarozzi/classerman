@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DlgStudentImport</class>
+ <widget class="QDialog" name="DlgStudentImport">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>806</width>
+    <height>619</height>
+   </rect>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="lblClass">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Classe </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tableStudents">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="showDropIndicator" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="rowCount">
+      <number>1</number>
+     </property>
+     <property name="columnCount">
+      <number>4</number>
+     </property>
+     <attribute name="horizontalHeaderCascadingSectionResizes">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>30</number>
+     </attribute>
+     <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderCascadingSectionResizes">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>25</number>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>50</number>
+     </attribute>
+     <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+      <bool>false</bool>
+     </attribute>
+     <row/>
+     <column>
+      <property name="text">
+       <string>Cognome</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Nome</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Username</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Classe</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QToolButton" name="btnReload">
+       <property name="text">
+        <string>Ricarica il file</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="btnFix">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Auto-Correggi</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="btnCheck">
+       <property name="text">
+        <string>Ricontrolla</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QToolButton" name="btnImport">
+       <property name="text">
+        <string>Esegui Importazione</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="btnDialog">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel</set>
+       </property>
+       <property name="centerButtons">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnDialog</sender>
+   <signal>accepted()</signal>
+   <receiver>DlgStudentImport</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>795</x>
+     <y>608</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnDialog</sender>
+   <signal>rejected()</signal>
+   <receiver>DlgStudentImport</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>795</x>
+     <y>608</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnReload</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgStudentImport</receiver>
+   <slot>tableReload()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>29</x>
+     <y>582</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>373</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnCheck</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgStudentImport</receiver>
+   <slot>tableCheck()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>276</x>
+     <y>596</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>359</x>
+     <y>417</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnImport</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgStudentImport</receiver>
+   <slot>tableImport()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>566</x>
+     <y>599</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>532</x>
+     <y>515</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableStudents</sender>
+   <signal>itemChanged(QTableWidgetItem*)</signal>
+   <receiver>DlgStudentImport</receiver>
+   <slot>tableItemChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>234</x>
+     <y>127</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>360</x>
+     <y>567</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>tableReload()</slot>
+  <slot>tableCheck()</slot>
+  <slot>tableImport()</slot>
+  <slot>tableItemChanged()</slot>
+ </slots>
+</ui>

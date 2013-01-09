@@ -1,0 +1,15 @@
+<RCC>
+  <qresource prefix="img">
+    <file>pixmaps/Teacher_Blackboard.svg</file>
+    <file>pixmaps/advanced_options.png</file>
+    <file>pixmaps/calendar2.svg</file>
+    <file>pixmaps/save.png</file>
+    <file>pixmaps/education.png</file>
+    <file>pixmaps/System-users.png</file>
+    <file>pixmaps/planner.png</file>
+  </qresource>
+  <qresource prefix="logo">
+    <file>pixmaps/logo.jpg</file>
+    <file>pixmaps/Stampa-silicone-tondo-fi55.png</file>
+  </qresource>
+</RCC>
