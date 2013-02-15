@@ -26,6 +26,7 @@ Elenco delle dipendenze:
 - qt4-qtconfig
 - tar >= 1.22
 - kuser
+- gksudo
 
 Al momento non è previsto un pacchetto di questo software per nessuna distribuzione, quindi occorre installare le dipendenze manualmente.
 

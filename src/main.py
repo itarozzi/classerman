@@ -53,15 +53,39 @@ from teachermanager import DlgTeacherManager
 
 
 class MainWindow(QtGui.QMainWindow, Ui_MainWindow) :
-    ROOT_CHECK = False
+    
+    REMOTE_DBG = False
+    ROOT_CHECK = True
+    APP_VERSION = 'beta20130215'
+    
+    # set breakpoint for remote pydev debugging
+    # append pydev remote debugger
+    if REMOTE_DBG:
+        # Make pydev debugger works for auto reload.
+        try:
+            
+            sys.path.append('/opt/eclipse/plugins/org.python.pydev_2.7.1.2012100913/pysrc')
+            #import pysrc.pydevd as pydevd
+            import pydevd
+            
+            # stdoutToServer and stderrToServer redirect stdout and stderr to eclipse console
+            pydevd.settrace('localhost', stdoutToServer=True, stderrToServer=True)
+        except ImportError:
+            sys.stderr.write("Error: " + 
+            "You must add org.python.pydev.debug.pysrc to your PYTHONPATH.")
+            sys.exit(1)
+
+ 
+    
+    
     
     scripts = {'endyear_backup':'./scripts/endyear_backup.sh',
                'newyear':'./scripts/newyear.sh','test1':'./scripts/testscript1.sh' }
     CUR_STATE={'init':0, 'active':1, 'saved':2}
-        
+    
     def __init__(self, parent):
 
-        self.version='beta20120116'
+        self.version=self.APP_VERSION
         self.title = ""
         self.curYear = ""
         self.curState = 0

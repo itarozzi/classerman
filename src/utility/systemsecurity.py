@@ -25,15 +25,20 @@ class SystemSecurity():
         '''
         Check if password entry is correct
         '''
-        uid = os.getuid()
-        
-        name=pwd.getpwuid(uid)[0]
+        #uid = os.getuid()
+        #name=pwd.getpwuid(uid)[0]
 
-        print name
+        # Get name of current sudo user 
+        name = os.getenv("SUDO_USER")
+
+
+        
         spwd.getspall()
         user_pwd = spwd.getspnam(name)[1]
 
-        crypt_pwd = crypt.crypt(str(password), ':a') 
+
+
+        crypt_pwd = crypt.crypt(str(password), user_pwd) 
         
 
         return crypt_pwd  == user_pwd

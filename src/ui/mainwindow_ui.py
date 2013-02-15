@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'mainwindow.ui'
+# Form implementation generated from reading ui file 'src/ui/mainwindow.ui'
 #
-# Created: Mon Jan 16 12:36:43 2012
-#      by: PyQt4 UI code generator 4.8.6
+# Created: Fri Feb 15 16:08:54 2013
+#      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -18,7 +18,6 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
         MainWindow.resize(1024, 768)
-        MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "MainWindow", None, QtGui.QApplication.UnicodeUTF8))
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setEnabled(True)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding)
@@ -44,7 +43,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(20)
         self.label_2.setFont(font)
-        self.label_2.setText(QtGui.QApplication.translate("MainWindow", "Pannello di Amministrazione del Server", None, QtGui.QApplication.UnicodeUTF8))
         self.label_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.verticalLayout_2.addWidget(self.label_2)
@@ -74,7 +72,6 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.labelServerId.setFont(font)
-        self.labelServerId.setText(QtGui.QApplication.translate("MainWindow", "TextLabel", None, QtGui.QApplication.UnicodeUTF8))
         self.labelServerId.setAlignment(QtCore.Qt.AlignCenter)
         self.labelServerId.setObjectName(_fromUtf8("labelServerId"))
         self.verticalLayout_2.addWidget(self.labelServerId)
@@ -95,7 +92,6 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.labelYear.setFont(font)
-        self.labelYear.setText(QtGui.QApplication.translate("MainWindow", "Anno -", None, QtGui.QApplication.UnicodeUTF8))
         self.labelYear.setTextFormat(QtCore.Qt.PlainText)
         self.labelYear.setAlignment(QtCore.Qt.AlignCenter)
         self.labelYear.setObjectName(_fromUtf8("labelYear"))
@@ -131,7 +127,6 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.btnNewYear.setFont(font)
-        self.btnNewYear.setText(QtGui.QApplication.translate("MainWindow", "Nuovo Anno", None, QtGui.QApplication.UnicodeUTF8))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(_fromUtf8(":/img/pixmaps/planner.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnNewYear.setIcon(icon)
@@ -153,7 +148,6 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.btnCloseYear.setFont(font)
         self.btnCloseYear.setAutoFillBackground(False)
-        self.btnCloseYear.setText(QtGui.QApplication.translate("MainWindow", "Chiusura Anno", None, QtGui.QApplication.UnicodeUTF8))
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap(_fromUtf8(":/img/pixmaps/save.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnCloseYear.setIcon(icon1)
@@ -172,7 +166,6 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.btnTeachers.setFont(font)
-        self.btnTeachers.setText(QtGui.QApplication.translate("MainWindow", "Gestione Insegnanti", None, QtGui.QApplication.UnicodeUTF8))
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap(_fromUtf8(":/img/pixmaps/education.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnTeachers.setIcon(icon2)
@@ -192,7 +185,6 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.btnStudents.setFont(font)
         self.btnStudents.setStyleSheet(_fromUtf8(""))
-        self.btnStudents.setText(QtGui.QApplication.translate("MainWindow", "Gestione Alunni", None, QtGui.QApplication.UnicodeUTF8))
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap(_fromUtf8(":/img/pixmaps/System-users.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnStudents.setIcon(icon3)
@@ -211,7 +203,6 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.btnAdvanced.setFont(font)
-        self.btnAdvanced.setText(QtGui.QApplication.translate("MainWindow", "Gestione Avanzata", None, QtGui.QApplication.UnicodeUTF8))
         icon4 = QtGui.QIcon()
         icon4.addPixmap(QtGui.QPixmap(_fromUtf8(":/img/pixmaps/advanced_options.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnAdvanced.setIcon(icon4)
@@ -227,26 +218,22 @@ class Ui_MainWindow(object):
         self.statusbar.setObjectName(_fromUtf8("statusbar"))
         MainWindow.setStatusBar(self.statusbar)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1024, 25))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1024, 29))
         self.menubar.setObjectName(_fromUtf8("menubar"))
         self.menuImpostazioni = QtGui.QMenu(self.menubar)
-        self.menuImpostazioni.setTitle(QtGui.QApplication.translate("MainWindow", "Impostazioni", None, QtGui.QApplication.UnicodeUTF8))
+        self.menuImpostazioni.setEnabled(False)
         self.menuImpostazioni.setObjectName(_fromUtf8("menuImpostazioni"))
         self.menuHelp = QtGui.QMenu(self.menubar)
-        self.menuHelp.setTitle(QtGui.QApplication.translate("MainWindow", "Help", None, QtGui.QApplication.UnicodeUTF8))
+        self.menuHelp.setEnabled(False)
         self.menuHelp.setObjectName(_fromUtf8("menuHelp"))
         self.menuArchivi = QtGui.QMenu(self.menubar)
-        self.menuArchivi.setTitle(QtGui.QApplication.translate("MainWindow", "Archivi", None, QtGui.QApplication.UnicodeUTF8))
         self.menuArchivi.setObjectName(_fromUtf8("menuArchivi"))
         MainWindow.setMenuBar(self.menubar)
         self.actionAbout = QtGui.QAction(MainWindow)
-        self.actionAbout.setText(QtGui.QApplication.translate("MainWindow", "About", None, QtGui.QApplication.UnicodeUTF8))
         self.actionAbout.setObjectName(_fromUtf8("actionAbout"))
         self.actionPreferenze = QtGui.QAction(MainWindow)
-        self.actionPreferenze.setText(QtGui.QApplication.translate("MainWindow", "Preferenze", None, QtGui.QApplication.UnicodeUTF8))
         self.actionPreferenze.setObjectName(_fromUtf8("actionPreferenze"))
         self.actionArchivioAnniPrec = QtGui.QAction(MainWindow)
-        self.actionArchivioAnniPrec.setText(QtGui.QApplication.translate("MainWindow", "Archivio anni precedenti", None, QtGui.QApplication.UnicodeUTF8))
         self.actionArchivioAnniPrec.setObjectName(_fromUtf8("actionArchivioAnniPrec"))
         self.menuImpostazioni.addAction(self.actionPreferenze)
         self.menuHelp.addAction(self.actionAbout)
@@ -265,6 +252,20 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        pass
+        MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "MainWindow", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_2.setText(QtGui.QApplication.translate("MainWindow", "Pannello di Amministrazione del Server", None, QtGui.QApplication.UnicodeUTF8))
+        self.labelServerId.setText(QtGui.QApplication.translate("MainWindow", "TextLabel", None, QtGui.QApplication.UnicodeUTF8))
+        self.labelYear.setText(QtGui.QApplication.translate("MainWindow", "Anno -", None, QtGui.QApplication.UnicodeUTF8))
+        self.btnNewYear.setText(QtGui.QApplication.translate("MainWindow", "Nuovo Anno", None, QtGui.QApplication.UnicodeUTF8))
+        self.btnCloseYear.setText(QtGui.QApplication.translate("MainWindow", "Chiusura Anno", None, QtGui.QApplication.UnicodeUTF8))
+        self.btnTeachers.setText(QtGui.QApplication.translate("MainWindow", "Gestione Insegnanti", None, QtGui.QApplication.UnicodeUTF8))
+        self.btnStudents.setText(QtGui.QApplication.translate("MainWindow", "Gestione Alunni", None, QtGui.QApplication.UnicodeUTF8))
+        self.btnAdvanced.setText(QtGui.QApplication.translate("MainWindow", "Gestione Avanzata", None, QtGui.QApplication.UnicodeUTF8))
+        self.menuImpostazioni.setTitle(QtGui.QApplication.translate("MainWindow", "Impostazioni", None, QtGui.QApplication.UnicodeUTF8))
+        self.menuHelp.setTitle(QtGui.QApplication.translate("MainWindow", "Help", None, QtGui.QApplication.UnicodeUTF8))
+        self.menuArchivi.setTitle(QtGui.QApplication.translate("MainWindow", "Archivi", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionAbout.setText(QtGui.QApplication.translate("MainWindow", "About", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionPreferenze.setText(QtGui.QApplication.translate("MainWindow", "Preferenze", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionArchivioAnniPrec.setText(QtGui.QApplication.translate("MainWindow", "Archivio anni precedenti", None, QtGui.QApplication.UnicodeUTF8))
 
 import classerman_rc

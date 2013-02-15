@@ -1,4 +1,4 @@
 #! /bin/sh
 
-python ./src/main.py
+gksudo python ./src/main.py
 
