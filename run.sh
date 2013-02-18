@@ -1,4 +1,5 @@
 #! /bin/sh
 
-gksudo python ./src/main.py
+cd `dirname $0`/src
+gksudo python ./main.py
 
